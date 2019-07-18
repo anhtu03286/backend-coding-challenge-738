@@ -29,7 +29,7 @@ elseif($params == 'acc' and $id > 0){
     $dataAccount = $api->getData('https://sample-accounts-api.herokuapp.com/accounts/'.$id);
     if(!empty($dataAccount['content'])){
         $account = json_decode($dataAccount['content'], true);
-        $html .= 'Name: '.$account['attributes']['name']; 
+        $html .= 'Name: '.$account['attributes']['name'].'<br>'; 
         $html .= 'Balance: '.$account['attributes']['balance']; 
     }
 } else {
